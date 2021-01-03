@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMakerProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="g93-lN-aQu">
+                                <rect key="frame" x="150.5" y="214.5" width="113" height="68.5"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-gv-QIJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="32"/>
+                                        <segments>
+                                            <segment title="🍕"/>
+                                            <segment title="🍔"/>
+                                            <segment title="🍗"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="topAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="FKY-aK-M3K"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식을 고르세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSH-U5-86b">
+                                        <rect key="frame" x="3" y="48" width="107.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="50X-nV-FnK">
+                                <rect key="frame" x="167" y="613" width="80" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매운맛? 🔥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0L9-y2-ptt">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-ud-jhj">
+                                        <rect key="frame" x="2.5" y="39.5" width="75" height="32"/>
+                                        <segments>
+                                            <segment title="😀"/>
+                                            <segment title="🔥"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="bottomAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="S4m-hB-EuW"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksT-TV-iyl">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VTW-Xb-8t6"/>
+                                    <constraint firstAttribute="height" constant="240" id="xWo-j6-2uv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="50X-nV-FnK" firstAttribute="top" secondItem="ksT-TV-iyl" secondAttribute="bottom" constant="45" id="1du-4o-Rwd"/>
+                            <constraint firstItem="ksT-TV-iyl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QZU-D8-Mj6"/>
+                            <constraint firstItem="ksT-TV-iyl" firstAttribute="top" secondItem="g93-lN-aQu" secondAttribute="bottom" constant="45" id="dkH-8e-Imn"/>
+                            <constraint firstItem="g93-lN-aQu" firstAttribute="centerX" secondItem="ksT-TV-iyl" secondAttribute="centerX" id="fvo-RH-c7n"/>
+                            <constraint firstItem="ksT-TV-iyl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pED-QQ-YcE"/>
+                            <constraint firstItem="g93-lN-aQu" firstAttribute="centerX" secondItem="50X-nV-FnK" secondAttribute="centerX" id="ycV-km-OjN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="0L9-y2-ptt" id="3KT-fA-nOI"/>
+                        <outlet property="bottomSegmentedControl" destination="Hgx-ud-jhj" id="5Ie-vd-rCF"/>
+                        <outlet property="imageView" destination="ksT-TV-iyl" id="swZ-7L-VXj"/>
+                        <outlet property="topLabel" destination="DSH-U5-86b" id="NUl-uS-Q4j"/>
+                        <outlet property="topSegmentedControl" destination="Tx9-gv-QIJ" id="d3J-Ij-2ud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
